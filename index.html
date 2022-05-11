@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="Play-Regular.ttf" as="font" crossorigin="anonymous" />
+    <title>Space Invader game</title>
+    <link rel="icon" href="./images/creator.jpg">
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Spinner -->
+    <div class="loadingDiv-parent">
+        <div class="loadingDiv">
+            <img src="./images/Processing.gif" />
+        </div>
+    </div>
+    <!-- Spinner Ends -->
+
+    <!--  Beginning code For cursor inside a circle  -->
+    <div class='circle'></div>
+    <!-- End of code For cursor inside a circle  -->
+
+    <div class="written">
+        <h4>Written by Idowu Adekale</h4>
+        <br>
+        <div class="github" onclick="myFunction()">
+            <a href="https://github.com/idowuadekale" target="_blank">GitHub</a>
+        </div>
+        <canvas id="myCanvas" width="480" height="520"></canvas>
+    </div>
+
+
+    <!-- Alternetive Js -->
+    <script src="./jquery.min.js"></script>
+
+    <!-- Main Js -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Play";
+    src: url("Play-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 10x;
+}
+
+html {
+    width: 100%;
+    font-family: "Play";
+}
+
+
+/* ########################################################################################### Beginning code For cursor inside a circle */
+
+.circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.circle::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 1.5px solid #28c5a8;
+    border-radius: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    animation: pulse 300ms ease-in-out alternate infinite
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+@keyframes pulse {
+    from {
+        transform: translate(-50%, -50%) scale(.8);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+
+/* End of code For cursor inside a circle */
+
+
+/* ######################################################################### Body style */
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url("./images/giphy2.gif") top center;
+    background-size: fixed;
+    position: absolute;
+}
+
+canvas {
+    display: block;
+    margin: 10vh auto;
+    background-color: #00008b;
+}
+
+
+/* ################################################################################################ Container style */
+
+.written {
+    border: 3px solid black;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    color: #fff;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+
+/* ################################################################################## Github link */
+
+.github,
+a {
+    text-align: center;
+    background-color: honeydew;
+    color: #000;
+    cursor: pointer;
+}
+
+.github:hover,
+a:hover {
+    color: honeydew;
+    background-color: #222;
+}
+
+
+/* ############################################################################################## LOADING SPINNER */
+
+.loadingDiv-parent {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 999998;
+}
+
+.loadingDiv {
+    position: fixed;
+    text-align: center;
+    top: 40%;
+    left: 43%;
+    z-index: 999999;
+}
+
+.loadingDiv .loading-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+}
